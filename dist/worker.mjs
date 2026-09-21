@@ -1,0 +1,2 @@
+import {train,rollout,presets} from './engine.mjs';
+self.onmessage=({data:{task,rewards,seed}})=>{try{const result=train(task,rewards,seed,p=>self.postMessage({type:'progress',...p}));const same=JSON.stringify(rewards)===JSON.stringify(presets[task].bad);const base=same?result:train(task,presets[task].bad,seed);self.postMessage({type:'done',curve:result.curve,episodes:result.episodes,seed,run:rollout(task,result.q,rewards),baseline:rollout(task,base.q,presets[task].bad)});}catch(e){self.postMessage({type:'error',message:e.message});}};
