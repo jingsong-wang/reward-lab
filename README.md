@@ -25,3 +25,8 @@ Independent educational construction inspired by [Specification gaming: the flip
 
 ## Deployment
 GitHub Pages source: GitHub Actions. The included workflow runs tests and JS syntax checks, then deploys `dist/`. The interface shares the MISREAD LAB visual identity. All room graphics are drawn with Canvas; no external fonts or image licenses are required.
+
+
+## Creative workshop
+
+Open `workshop.html` (fourth destination after the lessons). Arrange a 7×5 room and set eight signed event rewards. One robot and movable item, up to three breakable plants, and any number of walls/bins/rugs/collection points/reward tiles fitting the grid. These bounds keep Q-learning local and lightweight. Each policy trains for 6,000 episodes in a worker and replays 80 steps without a success condition. Save/load validated scene JSON including seed and reward settings. No automatic persistence or backend. See `docs/workshop.md`.

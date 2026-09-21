@@ -1,0 +1,5 @@
+# Creative workshop
+
+An optional fourth destination after the three lessons. A 7×5 editable office, one robot and one movable item, unlimited bins/rugs/collection points/walls/reward tiles within the grid, and at most three breakable plants. One item and bounded plant bits keep tabular learning small enough for browsers. No success condition: every evaluation lasts 80 steps. All event rewards are signed, including per-action reward. Disposal, hiding and delivery remove the item but never end the episode. Reward tiles trigger only on entry. Plants break once per episode. Reward and map edits invalidate the previous policy.
+
+Train 6,000 episodes in a cancellable worker; seeded Q-learning with exploratory training and greedy evaluation. The 80-step cap is a sampling boundary for a continuing discounted task. Show score, actions and observed event counts, not intent or a fabricated verdict. Export/import validated versioned scene JSON; no account or server. Reuse the existing office renderer. Verify transitions, bounds, reproducibility, actual learned loops, desktop/mobile interaction and live deployment.
